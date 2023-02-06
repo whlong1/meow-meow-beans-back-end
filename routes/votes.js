@@ -6,7 +6,6 @@ const { decodeUserFromToken, checkAuth } = middleware
 
 /*---------- Public Routes ----------*/
 
-
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, votesCtrl.castVote)
