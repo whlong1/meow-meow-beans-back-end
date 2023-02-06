@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Profile extends Model {
     static associate(models) {
-      Profile.belongsTo(models.User, { foreignKey: 'userId' })
+      Profile.belongsTo(models.User, { as: "user", foreignKey: 'userId' })
 
       Profile.hasMany(models.Vote, {
         as: 'votesGiven',

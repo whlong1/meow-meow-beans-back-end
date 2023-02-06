@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
 
     static associate(models) {
-      User.hasOne(models.Profile, { foreignKey: 'userId' })
+      User.hasOne(models.Profile, { as: 'profile', foreignKey: 'userId' })
     }
 
     comparePassword(tryPassword, cb) {
