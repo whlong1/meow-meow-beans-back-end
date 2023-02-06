@@ -10,7 +10,7 @@ router.post('/login', authCtrl.login)
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
-router.delete('/terminate', checkAuth, authCtrl.deleteAccount)
+router.delete('/delete', checkAuth, authCtrl.deleteAccount)
 router.post('/change-password', checkAuth, authCtrl.changePassword)
 
 module.exports = router
